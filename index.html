@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script> 
+let submitform= document.getElementById("validationForm")
+submitform.addEventListener("submit",(e)=>{e.preventDefault();});
+
+let name=document.getElementById("name");
+let email=document.getElementById("email");
+let phonenumber=document.getElementById("phonenumber");
+let password=document.getElementById("password");
+let confirmpassword=document.getElementById("confirmpassword");
+if(name.value== "" || email.value== ""|| phonenumber.value=="" || password.value==""|| confirmpassword.value==""){
+    alert('fill in all information')
+}
+else{
+    alert("form is successfully submitted")
+}
+
+</script>
+<body>
+    <section>
+        <H1 style="color: rgb(102, 102, 225);">WEEK ONE TASK</H1>
+    </section>
+    <section>
+        <div>
+            <form action="">
+             
+        <fieldset>
+            <legend style="color: #0b0b75;">Personal Data</legend>
+            <label for="name">Full Name</label>
+            <input type="text" name="name" required id="name"> <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" required id="email"><br>
+            <label for="phonenumber">Phone Number</label>
+            <input type="text" pattern="[0-9]{11}" required name="phonenumber" id="phonenumber"> <br>
+            <label for="male">Male</label>
+            <input type="radio" name="male" id="male" value="male">
+            <label for="female">Femle</label>
+            <input class="form-control" type="radio" name="female" id="female" value="female">
+        <br>
+        <label for="password">
+            Enter password:
+        </label>
+        <input type="password" required id="password" name="password" required  size="10" maxlength="10"  minlength="6"><br>
+        <label for="confirmpassword">
+            Confirm password:
+        </label>
+        <input type="password" required id="comfirmpassword" name="confirmpassword" required  size="10" maxlength="10" minlength="6">
+    </div>
+        </label><br>
+        </fieldset>
+        <button type="submit"> submit</button>
+       
+            </form>
+
+        </div>
+    </section>
+
+</body>
+</html>
